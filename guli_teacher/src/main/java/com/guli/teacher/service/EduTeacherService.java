@@ -1,7 +1,9 @@
 package com.guli.teacher.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.guli.teacher.entity.EduTeacher;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.guli.teacher.entity.TeacherQuery;
 
 /**
  * <p>
@@ -12,5 +14,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2021-03-02
  */
 public interface EduTeacherService extends IService<EduTeacher> {
+
+    void pageQuery(Page<EduTeacher> page, TeacherQuery teacherQuery);
 
 }

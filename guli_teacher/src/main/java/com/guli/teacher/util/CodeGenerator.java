@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-import org.junit.jupiter.api.Test;
+
 
 
 /**
@@ -18,7 +18,6 @@ import org.junit.jupiter.api.Test;
  */
 public class CodeGenerator {
 
-    @Test
     public void run() {
 
         // 1、创建代码生成器
