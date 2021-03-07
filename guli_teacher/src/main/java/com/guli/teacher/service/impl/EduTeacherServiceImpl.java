@@ -34,8 +34,8 @@ public class EduTeacherServiceImpl extends ServiceImpl<EduTeacherMapper, EduTeac
 
         String name = teacherQuery.getName();
         Integer level = teacherQuery.getLevel();
-        String begin = teacherQuery.getBegin();
-        String end = teacherQuery.getEnd();
+        String begin = teacherQuery.getGmtCreate();
+        String end = teacherQuery.getGmtModified();
 
         if(!StringUtils.isEmpty(name)){
             queryWrapper.like("name",name);
