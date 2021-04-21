@@ -1,7 +1,5 @@
 package com.guli.teacher.entity;
 
-import java.math.BigDecimal;
-
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
 import java.util.Date;
@@ -17,56 +15,56 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 课程
+ * 课程视频
  * </p>
  *
  * @author bangtidy
- * @since 2021-03-07
+ * @since 2021-04-20
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@ApiModel(value="EduCourse对象", description="课程")
-public class EduCourse implements Serializable {
+@ApiModel(value="EduVideo对象", description="课程视频")
+public class EduVideo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "课程ID")
+    @ApiModelProperty(value = "视频ID")
     @TableId(value = "id", type = IdType.ID_WORKER_STR)
     private String id;
 
-    @ApiModelProperty(value = "课程讲师ID")
-    private String teacherId;
+    @ApiModelProperty(value = "课程ID")
+    private String courseId;
 
-    @ApiModelProperty(value = "课程专业一级分类ID")
-    private String subjectParentId;
+    @ApiModelProperty(value = "章节ID")
+    private String chapterId;
 
-    @ApiModelProperty(value = "课程专业ID")
-    private String subjectId;
-
-    @ApiModelProperty(value = "课程标题")
+    @ApiModelProperty(value = "节点名称")
     private String title;
 
-    @ApiModelProperty(value = "课程销售价格，设置为0则可免费观看")
-    private BigDecimal price;
+    @ApiModelProperty(value = "排序字段")
+    private Integer sort;
 
-    @ApiModelProperty(value = "总课时")
-    private Integer lessonNum;
+    @ApiModelProperty(value = "播放次数")
+    private Long playCount;
 
-    @ApiModelProperty(value = "课程封面图片路径")
-    private String cover;
+    @ApiModelProperty(value = "是否可以试听：0免费 1收费")
+    private Boolean isFree;
 
-    @ApiModelProperty(value = "销售数量")
-    private Long buyCount;
+    @ApiModelProperty(value = "视频资源")
+    private String videoSourceId;
 
-    @ApiModelProperty(value = "浏览数量")
-    private Long viewCount;
+    @ApiModelProperty(value = "视频时长（秒）")
+    private Float duration;
+
+    @ApiModelProperty(value = "视频状态:见阿里云文档")
+    private String status;
+
+    @ApiModelProperty(value = "视频源文件大小（字节）")
+    private Long size;
 
     @ApiModelProperty(value = "乐观锁")
     private Long version;
-
-    @ApiModelProperty(value = "视频状态 Draft未发布  Normal已发布")
-    private String status;
 
     @ApiModelProperty(value = "创建时间", example = "2019-01-01 8:00:00")
     @TableField(fill = FieldFill.INSERT)

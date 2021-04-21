@@ -5,6 +5,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>guli_teacher</module>
+        <module>guli_common</module>
+        <module>guli_oss</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -65,6 +67,10 @@
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
@@ -76,6 +82,25 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <!-- 配置找到Xml文件 -->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+           <!-- &lt;!&ndash; maven默认加载的xml &ndash;&gt;
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>-->
+        </resources>
+
     </build>
 
 </project>

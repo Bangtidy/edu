@@ -3,11 +3,10 @@ package com.guli.teacher.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.guli.teacher.entity.EduTeacher;
-import com.guli.teacher.entity.TeacherQuery;
+import com.guli.teacher.entity.query.TeacherQuery;
 import com.guli.teacher.mapper.EduTeacherMapper;
 import com.guli.teacher.service.EduTeacherService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 

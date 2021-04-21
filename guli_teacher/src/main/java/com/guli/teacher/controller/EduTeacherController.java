@@ -1,11 +1,10 @@
 package com.guli.teacher.controller;
 
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.guli.common.result.ResultCode;
 import com.guli.teacher.entity.EduTeacher;
-import com.guli.teacher.entity.TeacherQuery;
+import com.guli.teacher.entity.query.TeacherQuery;
 import com.guli.teacher.exception.EduException;
 import com.guli.teacher.service.EduTeacherService;
 import com.guli.common.result.Result;

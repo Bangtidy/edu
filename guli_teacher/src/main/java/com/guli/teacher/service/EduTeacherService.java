@@ -3,7 +3,7 @@ package com.guli.teacher.service;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.guli.teacher.entity.EduTeacher;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.guli.teacher.entity.TeacherQuery;
+import com.guli.teacher.entity.query.TeacherQuery;
 
 /**
  * <p>
