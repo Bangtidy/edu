@@ -7,6 +7,8 @@
         <module>guli_teacher</module>
         <module>guli_common</module>
         <module>guli_oss</module>
+        <module>guli_vod</module>
+
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
